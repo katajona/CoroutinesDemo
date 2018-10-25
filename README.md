@@ -172,9 +172,11 @@ So what happened? Now the async tasks run at the same time, and didn't wait for 
 Using coroutines with RxJava is pretty similar to what we just did. Here is how you can use Retrofit RxJava and Coroutines together.
 
 Your API call should look like this:
+
 ```kotlin
 @GET("/api/books/1")
-fun getBookData(): Single<Book>```
+fun getBookData(): Single<Book>
+```
 
 And you can call it simply like this:
 
