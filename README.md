@@ -63,8 +63,8 @@ override fun onDestroy() {
 
 So after implementing the CoroutineScope interface, instead of using the `GLobalScope.launch{}` we can simply use `launch{}`. Tying it out we can see that is running on the main thread because of the `Dispatchers.Main` in the `CoroutineContext`.
 There are a few fixes for that. Changing it on the CoroutineContext to Dispatchers.IO but this way all of your tasks would run on the background.
-Or you could specify it in the launch like this: `launch (Dispatchers.IO){}` or in thy async task: `async (Dispatchers.IO){}`
-You can choose which fits your case better, but I would recommend to use the last two options. So now our code looks like this:
+Or you could specify it in the launch like this: `launch (Dispatchers.IO){}` or in the async task: `async (Dispatchers.IO){}`
+You can choose which fits your case better. So now our code looks like this:
 
 ```kotlin
 ...
@@ -86,7 +86,7 @@ private fun showText(text: String) {
 }
 ```
 
-Now our code runs nicely, without error.
+Now our code runs nicely, without any error.
 
 ### withContext()
 An other way to start a task is with the `withContext()` function. The previous example would look like this using `withContext()`:
