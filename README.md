@@ -177,6 +177,7 @@ Your API call should look like this:
 fun getBookData(): Single<Book>```
 
 And you can call it simply like this:
+
 ```kotlin
 launch{
     val book = withContext(Dispatchers.IO) {
