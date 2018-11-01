@@ -1,10 +1,7 @@
 # Introduction to Coroutines
 
 ## Setting up your project to use Coroutines
-To start working with Coroutines you have to set up your Kotlin version to `'1.3.0-rc-146'` and the following line to the repositories:
-
-    maven { url 'https://kotlin.bintray.com/kotlin-eap' }
-
+To start working with Coroutines you have to set up your Kotlin version to `'1.3.0'`.
 
 Also you have to include to following lines in your gradle file:
 
